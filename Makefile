@@ -18,5 +18,5 @@ greshunkel_test: greshunkel_test.o greshunkel.o stack.o
 %.o: ./src/%.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<
 
-$(NAME): greshunkel.o utils.o logging.o server.o stack.o parse.o http.o main.o parson.o
+$(NAME): greshunkel.o btree.o utils.o logging.o server.o stack.o parse.o http.o main.o parson.o
 	$(CC) $(CLAGS) $(INCLUDES) -o $(NAME) $^ -lm
